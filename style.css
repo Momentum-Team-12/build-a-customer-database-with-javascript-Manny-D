@@ -1,0 +1,25 @@
+.people { /* Container for people images, name and attriubutes */
+    height: 325px;
+    width: 400px;
+    display: inline;
+    border: red 1px solid
+}
+
+.row, .rowa, .rowb {
+    width: 90%;
+    height: 415px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.people img {
+    max-height: 325px;
+    width: 100%;
+}
+
+/* likely will change this */
+.attr { 
+    display: flex;
+    flex-wrap: wrap;
+}

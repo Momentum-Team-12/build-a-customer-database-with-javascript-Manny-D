@@ -1,3 +1,5 @@
+console.log ('States Linked')
+
 const usStates = [
   { name: 'ALABAMA', abbreviation: 'AL' },
   { name: 'ALASKA', abbreviation: 'AK' },

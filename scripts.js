@@ -1,47 +1,69 @@
-console.log('Code!')
+console.log(customers)
 
-// //test
-// function findUser (names) {
-//     let outName = []
-//     for (let name of names) {
-//         if (name.first === first) { 
-//             outName.push(name)
-//         }
-//     }
-//     return outName
-// }
+/* <div class="person">
+<img src=" https://place-puppy.com/300x300 " alt="Sophia Burns">
+<h3>Sophia Burns</h3>
+<div class="attr">
+    <div>Email</div>
+    <div>Address</div>
+    <div>DOB:</div>
+    <div>Customer since:</div>
+</div> */
 
-// function buildResults (resultsArray){
-//     for (let name of resultsArray){
-//         let newDiv = document.createElement('div')
-//         newDiv.innerText = `${name.name}`
-//         resultsDiv.appendChild(newDiv)
-//     }
-// }
+// asking the js to build one of these for each customer
 
-// // add each person to div
+const allCustomersDiv = document.querySelector('#allCustomers')
 
-// buildResults(findUser(’sophia’))
+for (let customer of customers) {
+    console.log(`${customer.name.first} ${customer.name.last}`)
+    let custDiv = document.createElement('div')
+
+    // test 1 - not working - close
+    let cImg = document.createElement('img')
+    cImg.classList.add('image')
+    cImg.src = `${customer.picture.large}`
+    custDiv.appendChild(cImg)
+
+    // test 2 - Email - works
+    custDiv.classList.add("cEmail")
+    let cEmail = document.createElement('p')
+    cEmail.innerHTML = `${customer.email}`
+    custDiv.appendChild(cEmail)
+
+    // Working example from class
+    custDiv.classList.add("person")
+    let nameEl = document.createElement('h3')
+    nameEl.innerHTML = `${customer.name.first} ${customer.name.last}`
+    custDiv.appendChild(nameEl)
+    
+    // test 3 - works, but need spacing
+    custDiv.classList.add("cAddy")
+    let cAdd = document.createElement('p')
+    cAdd.innerHTML = `${customer.location.street.number} ${customer.location.street.name}.
+    ${customer.location.city} ${customer.location.state}, ${customer.location.postcode}`
+    custDiv.appendChild(cAdd)
+
+    // test 4 - DOB
+    custDiv.classList.add("cDob")
+    let cDob = document.createElement('p')
+    cDob.innerHTML =`DOB: C${customer.dob.date}`
+    custDiv.appendChild(cDob)
+
+    // test 5
+    custDiv.classList.add("cSince")
+    let cSince = document.createElement('p')
+    cEmail.innerHTML = `Customer since: ${customer.registered.date}`
+    custDiv.appendChild(cEmail)
+    
 
 
-//test2
 
-const root = document.getElementById('root');
-console.log('Did you find me?')
+    allCustomersDiv.appendChild(custDiv)
+}
 
-for(let customer of customers) {
-    console.log(customer);
-    const customerCard = document.createElement('div');
-    customerCard.classList.add('customer-card');
 
-    root.appendChild(customerCard);
-    customerCard.innerHTML =` 
-    <img src="${customer.picture.large}"/>
-    <p> ${customer.email}<p>
-    <p class="name">${customer.name.title} ${customer.name.first} ${customer.name.last}</p>
-    <p>${customer.location.street.number} ${customer.location.street.name}.</p>
-    <p>${customer.location.city} ${customer.location.state}, ${customer.location.postcode}</p>
-    <p>DOB: C${customer.dob.date}</p>
-    <p>Customer since: ${customer.registered.date}</p>
-    `
-};
+//const image = document.createElement("img").src = "your image source";
+//box.innerHTML = ""; // remove any text from the box
+//box.append(image); // add the image inside of your element 
+
+

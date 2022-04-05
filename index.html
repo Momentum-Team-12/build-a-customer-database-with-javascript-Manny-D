@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <script src="customers.js" defer></script>
     <script src="states.js" defer></script>
+    <script src="./node_modules/moment/min/moment.min.js"></script>
+    <script src="scripts.js"></script>
     <title>Customer DB using JS</title>
 </head>
 <body>
@@ -16,9 +18,10 @@
 
     <section class="row">
         <div class="people">
-            <img src="starter_files/images/beans.jpg" alt="Bean Doggo">
+            <img src="starter_files/images/beans.jpg" alt="Sophia Burns">
                 <h3>Sophia Burns</h3>
                     <div class="attr">
+                        <span>Email</span> 
                         <span>Address</span> 
                         <span>DOB:</span> 
                         <span>Customer since:</span> 
@@ -26,9 +29,10 @@
         </div>
 
         <div class="people">
-            <img src="starter_files/images/boston-terrier.jpg" alt="Boston Terrier">
+            <img src="starter_files/images/boston-terrier.jpg" alt="Krin Oliver">
                 <h3>Krin Oliver</h3>
                     <div class="attr">
+                        <span>Email</span> 
                         <span>Address</span> 
                         <span>DOB:</span> 
                         <span>Customer since:</span> 
@@ -36,9 +40,10 @@
         </div>
 
         <div class="people">
-            <img src="starter_files/images/boxer.jpg" alt="Boxer">
+            <img src="starter_files/images/boxer.jpg" alt="Letitia Perry">
                 <h3>Letitia Perry</h3>
                     <div class="attr">
+                        <span>Email</span> 
                         <span>Address</span> 
                         <span>DOB:</span> 
                         <span>Customer since:</span> 
@@ -46,9 +51,10 @@
         </div>
 
         <div class="people">           
-            <img src="starter_files/images/boxer.jpg" alt="Boxer">
+            <img src="starter_files/images/boxer.jpg" alt="Margie Jones">
                 <h3>Margie Jones</h3>
                     <div class="attr">
+                        <span>Email</span> 
                         <span>Address</span> 
                         <span>DOB:</span> 
                         <span>Customer since:</span> 
@@ -58,9 +64,10 @@
 
     <section class="rowa">
         <div class="people">
-            <img src="starter_files/images/golden-lab.jpg" alt="Goldern Lab">
+            <img src="starter_files/images/golden-lab.jpg" alt="Cristina Porter">
                 <h3>Cristina Porter</h3>
                     <div class="attr">
+                        <span>Email</span> 
                         <span>Address</span> 
                         <span>DOB:</span> 
                         <span>Customer since:</span> 
@@ -68,9 +75,10 @@
         </div>
         
         <div class="people">
-            <img src="starter_files/images/little-dog.jpg" alt="Little Doggo"> 
+            <img src="starter_files/images/little-dog.jpg" alt="Laurie Dean"> 
                 <h3>Laurie Dean</h3>
                     <div class="attr">
+                        <span>Email</span> 
                         <span>Address</span> 
                         <span>DOB:</span> 
                         <span>Customer since:</span> 
@@ -78,9 +86,10 @@
         </div>
 
         <div class="people">
-            <img src="starter_files/images/old-shaggy.jpg" alt="Shaggy Doggo">
+            <img src="starter_files/images/old-shaggy.jpg" alt="Russell Simmons">
                 <h3>Russell Simmons</h3>
                     <div class="attr">
+                        <span>Email</span> 
                         <span>Address</span> 
                         <span>DOB:</span> 
                         <span>Customer since:</span> 
@@ -88,9 +97,10 @@
         </div>
 
         <div class="people">
-            <img src="starter_files/images/old-shaggy.jpg" alt="Shaggy Doggo">
+            <img src="starter_files/images/old-shaggy.jpg" alt="Carmen Hunt">
                 <h3>Carmen Hunt</h3>
                     <div class="attr">
+                        <span>Email</span> 
                         <span>Address</span> 
                         <span>DOB:</span> 
                         <span>Customer since:</span> 
@@ -100,9 +110,10 @@
 
     <section class="rowb">
         <div class="people">
-            <img src="starter_files/images/shih-tzu.jpg" alt="Shih Tsu">
+            <img src="starter_files/images/shih-tzu.jpg" alt="Erika Coleman">
                 <h3>Erika Coleman</h3>
                     <div class="attr">
+                        <span>Email</span> 
                         <span>Address</span> 
                         <span>DOB:</span> 
                         <span>Customer since:</span> 
@@ -110,7 +121,7 @@
         </div>
         
         <div class="people">
-            <img src="starter_files/images/young-bulldog.jpg" alt="Young Bulldog">
+            <img src="starter_files/images/young-bulldog.jpg" alt="Clifford Ramos">
                 <h3>Clifford Ramos</h3>
                     <div class="attr">
                         <span>Address</span> 
@@ -120,9 +131,10 @@
         </div>
 
         <div class="people">
-            <img src="starter_files/images/young-peppy.jpg" alt="Peppy Doggo">
+            <img src="starter_files/images/young-peppy.jpg" alt="Cody Evans">
                 <h3>Cody Evans</h3>
                     <div class="attr">
+                        <span>Email</span> 
                         <span>Address</span> 
                         <span>DOB:</span> 
                         <span>Customer since:</span> 
@@ -130,12 +142,13 @@
         </div>
 
         <div class="people">
-            <img src="starter_files/images/young-peppy.jpg" alt="Peppy Doggo">
+            <img src="starter_files/images/young-peppy.jpg" alt="Miguel Ross">
                 <h3>Miguel Ross</h3>
                     <div class="attr">
-                        <span>Address</span> 
-                        <span>DOB:</span> 
-                        <span>Customer since:</span> 
+                        <span id="email">E</span> 
+                        <span id="address">A</span> 
+                        <span id="dob">DOB: </span> 
+                        <span id="cs">Customer since: </span> 
         </div>
     </section>
 

@@ -18,6 +18,11 @@
     width: 100%;
 }
 
+h3 {
+    text-align: center;
+}
+
+
 /* likely will change this */
 .attr { 
     display: flex;

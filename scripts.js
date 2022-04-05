@@ -19,10 +19,6 @@ function buildResults (resultsArray){
     }
 }
 
-// call the function on a specific city and array of people
-// who in our class lives in RDU
-// console.log(findPeopleByCity('RDU', team12))
-
-// add each person to the page
+// add each person to div
 
 buildResults(findUser(’sophia’))

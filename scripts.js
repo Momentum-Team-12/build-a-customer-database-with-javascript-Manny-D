@@ -15,17 +15,17 @@ console.log(customers)
 const allCustomersDiv = document.querySelector('#allCustomers')
 
 for (let customer of customers) {
-    console.log(`${customer.name.first} ${customer.name.last}`)
+    //console.log(`${customer.name.first} ${customer.name.last}`)
     let custDiv = document.createElement('div')
 
-    // test 1 - not working - close
+    // test 1 - not working - working w/ Rebecca's help!
     let cImg = document.createElement('img')
     cImg.classList.add('image')
     cImg.src = `${customer.picture.large}`
     custDiv.appendChild(cImg)
 
     // test 2 - Email - works
-    custDiv.classList.add("cEmail")
+    // custDiv.classList.add("cEmail")
     let cEmail = document.createElement('p')
     cEmail.innerHTML = `${customer.email}`
     custDiv.appendChild(cEmail)
@@ -36,21 +36,24 @@ for (let customer of customers) {
     nameEl.innerHTML = `${customer.name.first} ${customer.name.last}`
     custDiv.appendChild(nameEl)
     
-    // test 3 - works, but need spacing
-    custDiv.classList.add("cAddy")
+    // test 3 - Address works, but need spacing
+    //custDiv.classList.add("cAddy")
     let cAdd = document.createElement('p')
-    cAdd.innerHTML = `${customer.location.street.number} ${customer.location.street.name}.
-    ${customer.location.city} ${customer.location.state}, ${customer.location.postcode}`
+    cAdd.innerHTML = `${customer.location.street.number} ${customer.location.street.name}.`
     custDiv.appendChild(cAdd)
 
+    let cAdd1 = document.createElement('p')
+    cAdd1.innerHTML = `${customer.location.city}, ${customer.location.state} ${customer.location.postcode}`
+    custDiv.appendChild(cAdd1)
+
     // test 4 - DOB
-    custDiv.classList.add("cDob")
+    // custDiv.classList.add("cDob")
     let cDob = document.createElement('p')
     cDob.innerHTML =`DOB: C${customer.dob.date}`
     custDiv.appendChild(cDob)
 
     // test 5
-    custDiv.classList.add("cSince")
+    // custDiv.classList.add("cSince")
     let cSince = document.createElement('p')
     cEmail.innerHTML = `Customer since: ${customer.registered.date}`
     custDiv.appendChild(cEmail)
